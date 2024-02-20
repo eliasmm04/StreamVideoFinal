@@ -46,6 +46,7 @@ def devolver_peliculas_favoritas(request, usuario_id):
     return JsonResponse({'error': 'Method not allowed'}, status=405)
 #He borrado el get de series ya que pertenecía a la rama de elías
 
+# get favoritos series
 def devolver_series_favoritas(request, usuario_id):
     if request.method == 'GET':
         if usuario_id is None: 
@@ -101,7 +102,6 @@ def favoritosview(request, favoritoid):
         return JsonResponse({'error': 'Method Not Allowed'}, status=405)
 
 #Logout 
-
 @csrf_exempt
 def logout(request, user_id):
     # Comprobación de token. El error_response guarda la información que le proporciona el return del verify_token
