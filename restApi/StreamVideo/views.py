@@ -8,6 +8,8 @@ from .models import Plataformas
 from .models import Users
 from .models import Actor 
 from .models import Favoritos
+from .models import Comentariospeliculas
+from .models import Comentariosseries
 import json,jwt
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.hashers import check_password
